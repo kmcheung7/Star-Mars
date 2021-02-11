@@ -45,7 +45,7 @@ function init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  island.rotation.z += 0.05;
+  island.rotation.z += 0.1;
   renderer.render(scene, camera);
 }
 
