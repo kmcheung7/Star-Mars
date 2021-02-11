@@ -21,10 +21,10 @@ function init() {
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   camera.position.set(0, 1, 30);
 
-  const ambient = new THREE.AmbientLight(0x404040, 2);
+  const ambient = new THREE.AmbientLight(0x404040, 1);
   scene.add(ambient);
 
-  const light = new THREE.DirectionalLight(0xffffff, 2);
+  const light = new THREE.DirectionalLight(0xffffff, 1);
   light.position.set(50, 50, 100);
   scene.add(light);
   //Renderer
@@ -45,7 +45,7 @@ function init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  island.rotation.z += 0.005;
+  island.rotation.z += 0.05;
   renderer.render(scene, camera);
 }
 
