@@ -4,7 +4,7 @@ let container;
 let camera;
 let renderer;
 let scene;
-let house;
+let island;
 
 function init() {
   container = document.querySelector(".scene");
@@ -36,16 +36,16 @@ function init() {
 
   //Load Model
   let loader = new THREE.GLTFLoader();
-  loader.load("./3d/scene.gltf", function(gltf) {
+  loader.load("./3d/island_all.gltf", function(gltf) {
     scene.add(gltf.scene);
-    house = gltf.scene.children[0];
+    island = gltf.scene.children[0];
     animate();
   });
 }
 
 function animate() {
   requestAnimationFrame(animate);
-  house.rotation.z += 0.005;
+  island.rotation.z += 0.005;
   renderer.render(scene, camera);
 }
 
