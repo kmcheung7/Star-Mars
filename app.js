@@ -36,7 +36,7 @@ function init() {
 
   //Load Model
   let loader = new THREE.GLTFLoader();
-  loader.load("./3d/island_all.gltf", function(gltf) {
+  loader.load("./3d/scene.gltf", function(gltf) {
     scene.add(gltf.scene);
     island = gltf.scene.children[0];
     animate();
